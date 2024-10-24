@@ -1,0 +1,23 @@
+﻿<Window x:Class="wpf_cw2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpf_cw2"
+        mc:Ignorable="d"
+        Title="Równania kwadratowe" Height="350" Width="400">
+    <Grid>
+        <Label Content="Rozwiązywanie równania kwadratowego. Podaj trzy współczynniki:" Margin="5,15,0,0" />
+        <Label Content="a:" Margin="20,45,0,0" />
+        <TextBox x:Name="wspA" Margin="50,50,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="50"/>
+        <Label Content="b:" Margin="20,75,0,0" />
+        <TextBox x:Name="wspB" Margin="50,80,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="50"/>
+        <Label Content="c:" Margin="20,105,0,0" />
+        <TextBox x:Name="wspC" Margin="50,110,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="50"/>
+        <Button x:Name="btnCalculate" Content="Oblicz" Width="100" Height="20" Margin="30,145,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Click="btnCalculate_Click" />
+        <Label x:Name="lblFunction" Content="Twoja funkcja to:" Margin="20,175,0,0" />
+        <TextBlock x:Name="txtFunction" Margin="130,180,0,0"  VerticalAlignment="Top" HorizontalAlignment="Left" Width="200" />
+        <Label x:Name="lblResult" Content="Miejsca zerowe funkcji to:" Margin="20,215,0,0" />
+        <TextBlock x:Name="txtResult" Margin="25,250,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="300" TextWrapping="Wrap" />
+    </Grid>
+</Window>
