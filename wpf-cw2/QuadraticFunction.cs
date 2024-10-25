@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace wpf_cw2
@@ -50,12 +51,15 @@ namespace wpf_cw2
         public string showFunction()
         {
             string inputFunction = "";
-            if (WspA < 0) { inputFunction += "(" + WspA + ")*x2"; } else if (WspA>0) { inputFunction = WspA.ToString()+ "*x2"; }
+            if (WspA < 0) { inputFunction += "(" + WspA + ")*x\\xB2"; } else if (WspA>0) { inputFunction = WspA.ToString()+ "*x\\xB2"; }
             if (WspA !=0 && WspB!=0) { inputFunction += " + "; }
             if (WspB < 0) { inputFunction += "(" + WspB + ")*x"; } else if (WspB>0) { inputFunction += WspB+ "*x"; }
             if ((WspB != 0 && WspC != 0) || (WspB==0 && WspA !=0 && WspC != 0)) { inputFunction += " + "; }
             if (WspC < 0) { inputFunction += "(" + WspC + ")"; }else if (WspC>0){inputFunction += WspC;}
-                return inputFunction;
+            
+            string inputFunction2= Regex.Unescape(inputFunction);
+            
+            return inputFunction2;
         }
     }
 }
